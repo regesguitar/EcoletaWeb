@@ -1,18 +1,15 @@
 import React from 'react'
-import {Route, BrowserRouter} from 'react-router-dom'
-
+import { Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import CreatePoint from './pages/CreatePoint'
 
-const Routes = () =>{
-    return (
-        <BrowserRouter>
-
-            <Route component= {Home} path='/' exact />
-            <Route component= {CreatePoint} path='/create-point'/>
-
-        </BrowserRouter>
-    )
+const AppRoutes = () => {
+  return (
+    <Routes>
+      <Route path='/' element={<Home />} />
+      <Route path='/create-point' element={<CreatePoint />} />
+    </Routes>
+  )
 }
 
-export default Routes
+export default AppRoutes
